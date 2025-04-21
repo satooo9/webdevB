@@ -30,6 +30,7 @@ $x = 10;
 if ($x < 10) {
 	echo "10より小さい";
 } elseif ($x == 10) {
+	#基本同じを判定したい時には、=を３つ使う（厳密）
 	echo "ちょうど10";
 } elseif ($x > 10) {
 	echo "10より大きい";
@@ -45,4 +46,17 @@ if ($password === $input) {
 	echo "ログイン成功";
 } else {
 	echo "パスワードが間違っています";
+}
+
+echo "<br>";
+
+
+//5. input.html と question3.php を連携させて、変数 $loggedIn = "true" の場合に「ようこそ」それ以外に場合には「ログインしてください」と表示するコードを書いてください。
+$loggedIn = "true";
+# $a = $_POST['login_status'];
+
+if ($_POST['login_status'] === $loggedIn) {
+	echo "ようこそ";
+} else {
+	echo "ログインしてください";
 }
