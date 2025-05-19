@@ -43,21 +43,73 @@ echo sum(5, 7);
 // 問題5：引数が偶数かどうかを判定し、true/falseを返す関数を作ってください（4を渡す）。
 // 期待される出力：1（true）
 
+function isEven($num)
+{
+    return $num % 2 === 0;
+}
 
-
+echo isEven(4) . "<br>";
 
 
 // 問題6：3つの引数を受け取り、最大値を返す関数を作成し、3, 9, 7 を渡して実行してください。
 // 期待される出力：9
 
+function maxOfThree($a, $b, $c)
+{
+    return max($a, $b, $c);
+}
+
+echo maxOfThree(3, 9, 7) . "<br>";
+
+
 // 問題7：配列を引数として受け取り、すべての要素の合計を返す関数を定義してください。
 // 期待される出力：10
+
+function sumArray($arr)
+{
+    $sum = 0;
+    foreach ($arr as $value) {
+        $sum += $value;
+    }
+    return $sum;
+}
+
+echo sumArray([1, 2, 3, 4]) . "<br>";
+
 
 // 問題8：文字列を大文字に変換して返す関数を定義し、「php」を渡してください。
 // 期待される出力：PHP
 
+// 文字列を大文字に変換する関数
+function toUpper($str)
+{
+    return strtoupper($str);
+}
+
+echo toUpper("php") . "<br>";
+
+
 // 問題9：数字を受け取り、偶数なら「Even」、奇数なら「Odd」と返す関数を作ってください（3を渡す）。
 // 期待される出力：Odd
 
+function evenOrOdd($num)
+{
+    if ($num % 2 === 0) {
+        return "Even";
+    } else {
+        return "Odd";
+    }
+}
+
+echo evenOrOdd(3) . "<br>";
+
+
 // 問題10：名前と年齢を引数に取り、「〇〇さんは△△歳です」と表示する関数を作ってください（Yuki, 25）
 // 期待される出力：Yukiさんは25歳です
+
+function introduce($name, $age)
+{
+    echo "{$name}さんは{$age}歳です";
+}
+
+introduce("Yuki", 25);
