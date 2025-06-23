@@ -1,0 +1,3 @@
+user名:mdnuser
+password:sat09.25
+ハッシュ化:$2y$10$kL5c8KhlSQV.2UVvszE9eePJTQmaDvFlb/X3SsCrkSiaumfPyE8ju
