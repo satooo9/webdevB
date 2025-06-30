@@ -1,5 +1,9 @@
 <?php
 
+session_start();
+$token=bin2hex(random_bytes(20));
+$_SESSION['token']=$token;
+
 require_once __DIR__ . '/inc/functions.php';
 require_once __DIR__ . '/login_check.php';
 
@@ -61,6 +65,7 @@ $html_form = <<<EOD
     <input type="hidden" name="id" value="$id">
     <!-- 表示されないデータフィールド -->
   </p>
+  <input type="hidden" name="token" value="$token">
   <button type="submit">送信する</button>
 </form>
 EOD;
